@@ -7,8 +7,8 @@ import { Comment, CommentSchema } from "./schemas/comments.schema";
 
 @Module({
   imports: [
-    MongooseModule.forFeature({ name: Track.name, schema: TrackSchema }),
-    MongooseModule.forFeature({ name: Comment.name, schema: CommentSchema })
+    MongooseModule.forFeature([{ name: Track.name, schema: TrackSchema }]),
+    MongooseModule.forFeature([{ name: Comment.name, schema: CommentSchema }])
   ],
   providers: [TrackService],
   controllers: [TrackController]
